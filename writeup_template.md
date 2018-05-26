@@ -83,8 +83,14 @@ Cell 9 contains code for slide_window(). This function is used in cell 15 to obt
 
 The HOG parameters were fixed to use the values explained previously. The overlap value was emprically chosen after trying various values including 30% and 80%:
 
+Overlap = 30%
+
 
 ![alt text][image3a]
+
+
+Overlap = 80%
+
 
 ![alt text][image3b]
 
@@ -124,10 +130,9 @@ Without overlapping boxes (using label):
 
 1. A major problem was false positives in the detection process. These were eliminated by trying out different values for the parameters.
 2. Another problem is the processing time for each of the frames. 
-3. The tuning process uses a single test video which means that the paramteres obtained might not generalize well
-4. Differing illumination conditions and car conditions have to be accounted for in the trianing data.
+3. The tuning process uses a single test video which means that the parameters obtained might not generalize well
+4. Differing illumination conditions and car conditions have to be accounted for in the training data.
 5. Merging boxes when detecting multiple vehicles could throw off calculation of metrics for individual vehicles.
-6. Causal data can be used to iprove the detection process. 
+6. Causal data can be used to improve the detection process. 
 7. Detection of the same vehicle across multiple frames can be changed to detection in the first frame and tracking in the following frames. This would make the pipeline faster.
-
 
